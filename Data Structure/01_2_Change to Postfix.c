@@ -34,7 +34,6 @@ int main()
         toPostfix(input,out,neg,&s);
         calPostfix(out,neg,&s);
     }
-
     return 0;
 }
 
@@ -156,6 +155,7 @@ int priority(char c)
     }
 }
 
+//Stack Operations
 bool IsFull(stack* s)
 {
     if(s->top == STACKSIZE-1)
