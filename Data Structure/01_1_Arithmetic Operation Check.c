@@ -17,10 +17,13 @@ int main()
 {
     char input[66];
     while(scanf("%s", input)!=EOF){
+        //Initialization
         stack s;
         stack* ps = &s;
         createS(ps);
         int i=0;
+            
+        //Check
         while(input[i]!= '\0'){
             if(input[i]=='('){
                 Push(ps,'(');
@@ -35,7 +38,8 @@ int main()
             }
             i++;
         }
-
+        
+        //Answer
         if(IsEmpty(ps)){
             printf("1");
         }
@@ -43,10 +47,10 @@ int main()
             printf("0");
         }
     }
-
     return 0;
 }
 
+//Stack operations
 bool IsFull(stack* ps){
     if(ps->top == STACKSIZE-1){
         return 1;
